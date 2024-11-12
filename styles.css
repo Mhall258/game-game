@@ -1,0 +1,131 @@
+/* style.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+#quiz-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Question styling */
+#question-container {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f7f9fc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container styling */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Answer button styles */
+button {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Default, correct, and wrong answer button colors */
+button:not(#next-button) {
+    background-color: #0288d1;
+    color: #fff;
+}
+
+button.correct {
+    background-color: #4caf50;
+}
+
+button.wrong {
+    background-color: #f44336;
+}
+
+/* Next button styling */
+#next-button {
+    margin-top: 20px;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+}
+
+#next-button:hover {
+    background-color: #f57c00;
+}
+
+/* Score display */
+#score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    margin-top: 20px;
+    height: 10px;
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #0288d1;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.correct {
+    background-color: #4caf50;
+}
+
+.wrong {
+    background-color: #f44336;
+}
